@@ -87,7 +87,7 @@
                     <h1 class="display-5 mb-0">Team Members</h1>
                 </div>
                 <div class="col-lg-6 text-lg-end">
-                    <a class="btn btn-primary py-3 px-5" href="">Contact Us</a>
+                    <a class="btn btn-primary py-3 px-5" href="#contact">Contact Us</a>
                 </div>
             </div>
             <div class="row g-4">
@@ -113,10 +113,10 @@
                                 <h5>Diego Erazo</h5>
                                 <span>UI/UX Designer</span>
                                 <p>
-                                    Ingeniero de software con experiencia en desarrollo de aplicaciones, 
-                                    manejo de lenguajes de programación y diseño de soluciones escalables. 
-                                    Con sólidos conocimientos en redes, protocolos y administración de sistemas. 
-                                    Orientado al trabajo colaborativo bajo metodologías ágiles, 
+                                    Ingeniero de software con experiencia en desarrollo de aplicaciones,
+                                    manejo de lenguajes de programación y diseño de soluciones escalables.
+                                    Con sólidos conocimientos en redes, protocolos y administración de sistemas.
+                                    Orientado al trabajo colaborativo bajo metodologías ágiles,
                                     integración continua y buenas prácticas de desarrollo
                                 </p>
                                 <p class="mb-0">Figma, Adobe XD, accesibilidad</p>
@@ -441,7 +441,7 @@
                     <h1 class="display-5 mb-0">Let's Work Together</h1>
                 </div>
                 <div class="col-lg-6 text-lg-end">
-                    <a class="btn btn-primary py-3 px-5" href="">Say Hello</a>
+                    <a class="btn btn-primary py-3 px-5" href="">MOCA Team</a>
                 </div>
             </div>
             <div class="row g-5">
@@ -467,7 +467,7 @@
                     <p class="mb-4">The contact form is currently inactive. Get a functional and working contact form
                         with Ajax & PHP in a few minutes. Just copy and paste the files, add a little code and you're
                         done. <a href="https://htmlcodex.com/contact-form">Download Now</a>.</p>
-                    <form>
+                    <form id="contactForm">
                         <div class="row g-3">
                             <div class="col-md-6">
                                 <div class="form-floating">
@@ -558,6 +558,17 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+    <script>
+        document.getElementById("contactForm").addEventListener("submit", function (e) {
+
+            e.preventDefault(); // evita que la página se recargue
+
+            alert("Mensaje enviado correctamente. ¡Gracias por contactarnos!");
+
+            this.reset(); // limpia el formulario
+
+        });
+    </script>
 </body>
 
 </html>
